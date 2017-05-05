@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addPoll()">
+    <ion-icon name="add"></ion-icon>
+  </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Ionic Menu Starter</h3>
+
+  <ion-list>
+  <ion-item *ngFor="let poll of polls | async" (click)="showOptions(poll.$key, poll.title)">
+    {{poll.title}}
+  </ion-item>
+</ion-list>
+</ion-content>

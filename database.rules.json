@@ -1,0 +1,9 @@
+{
+  "rules": {
+    ".read": true,
+    "polls": {
+      ".write": true
+    },
+    ".write": "auth != null"
+  }
+}
